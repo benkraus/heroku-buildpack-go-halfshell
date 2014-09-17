@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-echo "--- {}"
+config=$(cat $1/config.json)
+cat << EOF
+---
+config_vars:
+  PATH: bin:/usr/bin:/bin
+default_process_types:
+  web: halfshell $config
+EOF
