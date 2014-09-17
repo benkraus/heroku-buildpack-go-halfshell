@@ -137,11 +137,13 @@ rm -rf $build/.heroku
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
 
-echo "       Go getting github.com/benkraus/halfshell"
-go get -u github.com/benkraus/halfshell
+go get github.com/oysterbooks/halfshell
 
-cd $GOPATH/src/github.com/benkraus/halfshell
-echo "       Go getting github.com/benkraus/halfshell dependencies"
-go get
+# echo "       Go getting github.com/benkraus/halfshell"
+# go get -u github.com/benkraus/halfshell
+
+# cd $GOPATH/src/github.com/benkraus/halfshell
+# echo "       Go getting github.com/benkraus/halfshell dependencies"
+# go get
 
 
