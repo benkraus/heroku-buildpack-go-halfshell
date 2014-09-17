@@ -137,6 +137,7 @@ rm -rf $build/.heroku
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
 
+go get github.com/rafikk/imagick/imagick
 go get github.com/benkraus/halfshell
 cd $GOPATH/src/github.com/benkraus/halfshell
 go get
